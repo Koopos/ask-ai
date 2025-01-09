@@ -2,7 +2,7 @@
  * @Author: 娄松 
  * @Date: 2025-01-09 09:15:54
  * @LastEditors: 娄松 
- * @LastEditTime: 2025-01-09 13:43:07
+ * @LastEditTime: 2025-01-09 13:56:57
  * @FilePath: \ask-ai\hooks\useChat.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -28,7 +28,7 @@ const useChatEdu = () => {
     } = useChat({
         api: '/api',
         headers: {
-            Authorization: `Bearer sk-3d92a33fc3224a9eaf572693eae86b9b`
+            Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`
         },
         body: {
             model: Model.DEEPSEEK
@@ -57,7 +57,7 @@ const useChatEdu = () => {
     }
         fetch('/api',{
             headers: {
-                Authorization: `Bearer sk-3d92a33fc3224a9eaf572693eae86b9b`,
+                Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
                 'Content-Type': 'application/json'
             },
             method: 'POST',
