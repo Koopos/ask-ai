@@ -34,7 +34,7 @@ changeset 可以自动生成和维护变更日志。每次进行版本更新时�
   return (
     <div>
       <div
-        className="overflow-y-auto pb-[80px] w-[840px] p-[20px]"
+        className="overflow-y-auto pb-[80px] max-w-[840px] p-[20px]"
         style={{ height: "100vh", margin: "0 auto" }}
       >
         {messageList.map((v) =>
@@ -53,7 +53,7 @@ changeset 可以自动生成和维护变更日志。每次进行版本更新时�
           )
         )}
       </div>
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute bottom-[30px] left-0 right-0 px-[40px]">
         <PromptInput value={prompt} onChange={e=>setPrompt(e.target.value)} onSend={send} />
       </div>
     </div>
