@@ -1,0 +1,1 @@
+export const plainText = (promptContent: string) => promptContent
